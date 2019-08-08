@@ -10,13 +10,13 @@
         Title="Excel" Height="450" Width="545
         ">
     <Grid Margin="0,0,2,-4" Height="423" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="535">
-        <Label Content="Number:" HorizontalAlignment="Left" Margin="378,14,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date:" HorizontalAlignment="Left" Margin="378,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.06,0.514"/>
-        <Label Content="Payment due:" HorizontalAlignment="Left" Margin="378,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,1.192"/>
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="361,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="361,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.06,0.514"/>
+        <Label Content="Payment due:" HorizontalAlignment="Left" Margin="361,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,1.192"/>
         <Label Content="Receiver:" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
         <Label Content="Customer:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.59,-0.297"/>
         <Label Content="Reg. nr.:" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5"/>
-        <Label Content="Due date:" HorizontalAlignment="Left" Margin="378,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="Due date:" HorizontalAlignment="Left" Margin="361,96,0,0" VerticalAlignment="Top"/>
         <GroupBox Header="" HorizontalAlignment="Left" Height="172" Margin="10,193,0,0" VerticalAlignment="Top" Width="515"></GroupBox>
         <Separator HorizontalAlignment="Left" Height="100" Margin="10,193,0,0" VerticalAlignment="Top" Width="515"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="190,230,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.5,0.5">
@@ -49,7 +49,7 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator HorizontalAlignment="Left" Height="100" Margin="363,231,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.5,0.5">
+        <Separator HorizontalAlignment="Left" Height="100" Margin="368,231,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -63,7 +63,7 @@
         <Label Content="Description" HorizontalAlignment="Left" Margin="138,209,0,0" VerticalAlignment="Top"/>
         <Label Content="Unit" HorizontalAlignment="Left" Margin="280,209,0,0" VerticalAlignment="Top"/>
         <Label Content="Qnt" HorizontalAlignment="Left" Margin="331,209,0,0" VerticalAlignment="Top"/>
-        <Label Content="Amount" HorizontalAlignment="Left" Margin="463,209,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total Price" HorizontalAlignment="Left" Margin="450,209,0,0" VerticalAlignment="Top"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="386,209,0,0" VerticalAlignment="Top"/>
         <Separator HorizontalAlignment="Left" Height="54" Margin="-21,253,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
@@ -75,40 +75,35 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="66,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="334,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="380,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="447,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
-        <Label Content="Summary:" HorizontalAlignment="Left" Margin="408,360,0,0" VerticalAlignment="Top"/>
-        <Label Content="Total:" HorizontalAlignment="Left" Margin="408,391,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="439,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="420,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="460,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="460,96,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="qntLabel_1" HorizontalAlignment="Left" Height="23" Margin="334,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="priceLabel_1"  HorizontalAlignment="Left" Height="23" Margin="382,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
+        <Label Content="Grand Total:" HorizontalAlignment="Left" Margin="366,387,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="422,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="paymentDue" HorizontalAlignment="Left" Height="23" Margin="448,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
+        <Label Name="dueDateLabel" Content="" HorizontalAlignment="Left" Margin="444,96,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96"/>
         <Label Content="INVOICE" HorizontalAlignment="Left" Margin="138,47,0,0" VerticalAlignment="Top" Height="30" Width="65"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="66,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="334,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="380,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="447,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25"/>
+        <TextBox Name="qntLabel_2" HorizontalAlignment="Left" Height="23" Margin="334,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="priceLabel_2" HorizontalAlignment="Left" Height="23" Margin="382,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="66,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="334,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="380,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="447,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25"/>
+        <TextBox Name="qntLabel_3" HorizontalAlignment="Left" Height="23" Margin="334,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="priceLabel_3" HorizontalAlignment="Left" Height="23" Margin="382,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="66,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="334,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="380,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="447,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
+        <TextBox Name="qntLabel_4" HorizontalAlignment="Left" Height="23" Margin="334,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="priceLabel_4" HorizontalAlignment="Left" Height="23" Margin="382,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
+        <DatePicker Name="dateLabel" HorizontalAlignment="Left" Margin="403,43,0,0" VerticalAlignment="Top" Width="113"/>
+        <Label Name="totalPriceLabel_1" Content="" HorizontalAlignment="Center" Margin="456,251,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
+        <Label Name="totalPriceLabel_2" Content="" HorizontalAlignment="Center" Margin="456,279,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
+        <Label Name="totalPriceLabel_3" Content="" HorizontalAlignment="Center" Margin="456,307,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
+        <Label Name="totalPriceLabel_4" Content="" HorizontalAlignment="Center" Margin="456,335,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
 
     </Grid>
 </Window>
