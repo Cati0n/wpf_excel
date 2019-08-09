@@ -94,77 +94,11 @@ namespace wpf_excel
                 }
 
             }
-
-            //if ((sender == qntLabel_1) || (sender == priceLabel_1))
-            //{
-            //    if (qntLabel_1.Text != "" && priceLabel_1.Text != "")
-            //    {
-            //        totalPriceLabel_1.Text = Convert.ToString(Convert.ToDouble(qntLabel_1.Text) * Convert.ToDouble(priceLabel_1.Text));
-            //    }
-            //    else
-            //    {
-            //        totalPriceLabel_1.Text = "0";
-            //    }
-            //}
-            //else if ((sender == qntLabel_2) || (sender == priceLabel_2))
-            //{
-            //    if (qntLabel_2.Text != "" && priceLabel_2.Text != "")
-            //    {
-            //        totalPriceLabel_2.Text = Convert.ToString(Convert.ToDouble(qntLabel_2.Text) * Convert.ToDouble(priceLabel_2.Text));
-            //    }
-            //    else
-            //    {
-            //        totalPriceLabel_2.Text = "0";
-            //    }
-            //}
-            //else if ((sender == qntLabel_3) || (sender == priceLabel_3))
-            //{
-            //    if (qntLabel_3.Text != "" && priceLabel_3.Text != "")
-            //    {
-
-            //        totalPriceLabel_3.Text = Convert.ToString(Convert.ToDouble(qntLabel_3.Text) * Convert.ToDouble(priceLabel_3.Text));
-            //    }
-            //    else
-            //    {
-            //        totalPriceLabel_3.Text = "0";
-            //    }
-            //}
-            //else if ((sender == qntLabel_4) || (sender == priceLabel_4))
-            //{
-            //    if (qntLabel_4.Text != "" && priceLabel_4.Text != "")
-            //    {
-            //        totalPriceLabel_4.Text = Convert.ToString(Convert.ToDouble(qntLabel_4.Text) * Convert.ToDouble(priceLabel_4.Text));
-            //    }
-            //    else
-            //    {
-            //        totalPriceLabel_4.Text = "0";
-            //    }
-            //}
         }
 
         private void grandTotalChange(object sender, TextChangedEventArgs e)
         {
-            //foreach(TextBox element in totalPriceLabelArr)
-            //{
-            //    if (element.Text.Length > 1)
-            //    {
-            //        string totalPriceText = element.Text.Remove(element.Text.Length - 1);
-            //        string grandTotalText = grandTotalLabel_1.Content.ToString();
-            //        if (grandTotalText.Length > 1)
-            //        {
-            //            grandTotalText = grandTotalText.Remove(grandTotalText.Length - 1);
-            //        }
-
-            //        grandTotalLabel_1.Content = Convert.ToString(Convert.ToDouble(grandTotalText) + Convert.ToDouble(totalPriceText));
-            //        break;
-            //    }
-            //}
-
-            //grandTotalLabel_1.Content += "\u20AC";
             grandTotalLabel_1.Content = "0";
-            //string tempText = grandTotalLabel_1.Content.ToString();
-            //tempText = tempText.Remove(tempText.Length - 1);
-            //grandTotalLabel_1.Content = tempText;
             foreach (TextBox element in totalPriceLabelArr)
             {
                 string newElement = element.Text;
@@ -177,35 +111,10 @@ namespace wpf_excel
             
             grandTotalLabel_1.Content += "\u20AC";
         }
-        // grandTotalLabel_1.Content = Convert.ToString(Convert.ToDouble(totalPriceLabel_1.Text) + Convert.ToDouble(totalPriceLabel_2.Text) + Convert.ToDouble(totalPriceLabel_3.Text) + Convert.ToDouble(totalPriceLabel_4.Text)) + "\u20AC";
-
-        //private void QntLabel_1_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    if (qntLabel_1.Text != "" && priceLabel_1.Text != "")
-        //    {
-        //        totalPriceLabel_1.Content = Convert.ToInt32(qntLabel_1.Text) * Convert.ToInt32(priceLabel_1.Text);
-        //    }
-        //    else
-        //    {
-        //        totalPriceLabel_1.Content = "";
-        //    }
-        //}
-        //private void PriceLabel_1_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    if (qntLabel_1.Text != "" && priceLabel_1.Text != "")
-        //    {
-        //        totalPriceLabel_1.Content = Convert.ToInt32(qntLabel_1.Text) * Convert.ToInt32(priceLabel_1.Text);
-        //    }
-        //    else
-        //    {
-        //        totalPriceLabel_1.Content = "";
-        //    }
-        //}
         private void DateLabel_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             if (dateLabel.Text != "" && paymentDue.Text != "")
             {
-                //dueDateLabel.Content = dateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(paymentDue.Text));
                 if (dateLabel.SelectedDate != null)
                     _dueDate = dateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(paymentDue.Text));
                 dueDateLabel.Content = _dueDate.Date.ToString("dd/MM/yyy");
