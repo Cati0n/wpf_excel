@@ -79,14 +79,14 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
         <TextBox Name="qntLabel_1" HorizontalAlignment="Left" Height="23" Margin="334,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
         <TextBox Name="priceLabel_1"  HorizontalAlignment="Left" Height="23" Margin="382,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-        <Label Content="Grand Total:" HorizontalAlignment="Left" Margin="366,387,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="422,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
+        <Label Content="Grand Total:" HorizontalAlignment="Left" Margin="366,377,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="invoiceNumberLabel_1" HorizontalAlignment="Left" Height="23" Margin="422,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
         <TextBox Name="paymentDue" HorizontalAlignment="Left" Height="23" Margin="448,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68"/>
         <Label Name="dueDateLabel" Content="" HorizontalAlignment="Left" Margin="444,96,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="79,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96"/>
-        <Label Content="INVOICE" HorizontalAlignment="Left" Margin="138,47,0,0" VerticalAlignment="Top" Height="30" Width="65"/>
+        <Label Content="INVOICE" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="138,47,0,0" VerticalAlignment="Top" Height="30" Width="61"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="66,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="273,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
         <TextBox Name="qntLabel_2" HorizontalAlignment="Left" Height="23" Margin="334,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
@@ -100,10 +100,12 @@
         <TextBox Name="qntLabel_4" HorizontalAlignment="Left" Height="23" Margin="334,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
         <TextBox Name="priceLabel_4" HorizontalAlignment="Left" Height="23" Margin="382,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
         <DatePicker Name="dateLabel" HorizontalAlignment="Left" Margin="403,43,0,0" VerticalAlignment="Top" Width="113"/>
-        <Label Name="totalPriceLabel_1" Content="" HorizontalAlignment="Center" Margin="456,251,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
-        <Label Name="totalPriceLabel_2" Content="" HorizontalAlignment="Center" Margin="456,279,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
-        <Label Name="totalPriceLabel_3" Content="" HorizontalAlignment="Center" Margin="456,307,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
-        <Label Name="totalPriceLabel_4" Content="" HorizontalAlignment="Center" Margin="456,335,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
+        <TextBox Name="totalPriceLabel_1" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" Margin="449,251,16,0" VerticalAlignment="Top" Width="70" Height="25" BorderThickness="0"/>
+        <TextBox Name="totalPriceLabel_2" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" Margin="449,279,16,0" VerticalAlignment="Top" Width="70" Height="25" BorderThickness="0"/>
+        <TextBox Name="totalPriceLabel_3" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" Margin="449,307,16,0" VerticalAlignment="Top" Width="70" Height="25" BorderThickness="0"/>
+        <TextBox Name="totalPriceLabel_4" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" Margin="449,335,16,0" VerticalAlignment="Top" Width="70" Height="25" BorderThickness="0"/>
+        <Label Name="grandTotalLabel_1" Content="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" Margin="449,380,16,0" VerticalAlignment="Top" Width="70" Height="25" />
+        <Label Name="invoiceNumberLabel_2" Content="" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="199,47,0,0" VerticalAlignment="Top" Height="30" Width="70"/>
 
     </Grid>
 </Window>
