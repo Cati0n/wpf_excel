@@ -15,6 +15,7 @@ namespace wpf_excel
         TextBox[] qntLabelArr = new TextBox[4];
         TextBox[] priceLabelArr = new TextBox[4];
         TextBox[] totalPriceLabelArr = new TextBox[4];
+        Export export = new Export();
         
         public MainWindow()
         {
@@ -42,6 +43,8 @@ namespace wpf_excel
             qntLabelArr = new TextBox [] { qntLabel_1, qntLabel_2, qntLabel_3, qntLabel_4 };
             priceLabelArr = new TextBox[] { priceLabel_1, priceLabel_2, priceLabel_3, priceLabel_4 };
             totalPriceLabelArr = new TextBox[] { totalPriceLabel_1, totalPriceLabel_2, totalPriceLabel_3, totalPriceLabel_4 };
+
+            //export.GenerateExcelFile();
         }
 
         private void InvoiceNumberLabel_1_LostFocus(object sender, RoutedEventArgs e)
