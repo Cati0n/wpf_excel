@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Office.Interop.Excel;
 
 namespace wpf_excel
@@ -11,20 +7,28 @@ namespace wpf_excel
     {
         public void GenerateExcelFile()
         {
-            //Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-            //app.Visible = true;
-            //app.WindowState = XlWindowState.xlMaximized;
+            var excelApplication = new Application();
+            excelApplication.Visible = true;
+            excelApplication.WindowState = XlWindowState.xlMaximized;
 
-            //Workbook wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
-            //Worksheet ws = wb.Worksheets[1];
-            //DateTime currentDate = DateTime.Now;
+            var workBook = excelApplication.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+            var excelSheet = workBook.Worksheets[1];
 
-            //ws.Range["A1:B1"].Merge();
-            //ws.Range["A1:B1"].Value = "Who is number one? :)";
+            GenerateSheet(excelSheet);
             
+            workBook.SaveAs("C:\\Temp\\test.xlsx");
+            workBook.ExportAsFixedFormat(XlFixedFormatType.xlTypePDF, "C:\\Temp\\test.pdf");
+        }
 
-            //wb.SaveAs("C:\\Temp\\test.xlsx");
-            //wb.ExportAsFixedFormat(XlFixedFormatType.xlTypePDF, "C:\\Temp\\test.pdf");
+        private void GenerateSheet(Worksheet excelWorksheet)
+        {
+            excelWorksheet.Range["A1:B1"].Merge();
+            excelWorksheet.Range["A1:B1"].Value = "Who is number one? :)";
+
+            excelWorksheet.Range[1, 1].Value = "Company Name";
+            //excelWorksheet.Range[1 + 1, 1].Value = model.CompanyName;
+
+
         }
     }
 }

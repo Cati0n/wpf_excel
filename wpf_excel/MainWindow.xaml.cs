@@ -16,14 +16,17 @@ namespace wpf_excel
         TextBox[] priceLabelArr = new TextBox[4];
         TextBox[] totalPriceLabelArr = new TextBox[4];
         Export export = new Export();
-        
+
+        private readonly ViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new ViewModel();
+            DataContext = _viewModel;
 
-            dateLabel.SelectedDateChanged += DateLabel_SelectedDateChanged;
-            paymentDue.TextChanged += PaymentDue_TextChanged;
-            invoiceNumberLabel_1.LostFocus += InvoiceNumberLabel_1_LostFocus;
+            DateLabel.SelectedDateChanged += DateLabel_SelectedDateChanged;
+            PaymentDue.TextChanged += PaymentDue_TextChanged;
 
             qntLabel_1.TextChanged += totalPriceChange;
             qntLabel_2.TextChanged += totalPriceChange;
@@ -47,10 +50,6 @@ namespace wpf_excel
             //export.GenerateExcelFile();
         }
 
-        private void InvoiceNumberLabel_1_LostFocus(object sender, RoutedEventArgs e)
-        {
-            invoiceNumberLabel_2.Content = invoiceNumberLabel_1.Text;
-        }
 
         private void totalPriceChange(object sender, TextChangedEventArgs e)
         {
@@ -116,29 +115,29 @@ namespace wpf_excel
         }
         private void DateLabel_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (dateLabel.Text != "" && paymentDue.Text != "")
+            if (DateLabel.Text != "" && PaymentDue.Text != "")
             {
-                if (dateLabel.SelectedDate != null)
-                    _dueDate = dateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(paymentDue.Text));
-                dueDateLabel.Content = _dueDate.Date.ToString("dd/MM/yyy");
+                if (DateLabel.SelectedDate != null)
+                    _dueDate = DateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(PaymentDue.Text));
+                DueDateLabel.Content = _dueDate.Date.ToString("dd/MM/yyy");
             }
             else
             {
-                dueDateLabel.Content = "";
+                DueDateLabel.Content = "";
             }
         }
 
         private void PaymentDue_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (dateLabel.Text != "" && paymentDue.Text != "")
+            if (DateLabel.Text != "" && PaymentDue.Text != "")
             {
-                if (dateLabel.SelectedDate != null)
-                    _dueDate = dateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(paymentDue.Text));
-                dueDateLabel.Content = _dueDate.Date.ToString("dd/MM/yyy");
+                if (DateLabel.SelectedDate != null)
+                    _dueDate = DateLabel.SelectedDate.Value.AddDays(Convert.ToDouble(PaymentDue.Text));
+                DueDateLabel.Content = _dueDate.Date.ToString("dd/MM/yyy");
             }
             else
             {
-                dueDateLabel.Content = "";
+                DueDateLabel.Content = "";
             }
         }
     }
